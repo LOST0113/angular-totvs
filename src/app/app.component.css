@@ -1,3 +1,7 @@
+body {
+    position: relative;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -6,6 +10,9 @@ footer {
     background-color: rgb(23, 2, 43);
     color: aliceblue;
     padding: 10px 50px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 p {

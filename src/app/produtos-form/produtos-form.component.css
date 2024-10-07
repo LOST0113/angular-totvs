@@ -1,0 +1,23 @@
+body {
+    width: 100%;
+}
+form {
+    margin: 0 auto;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.branco {
+    color: aliceblue;
+}
+
+button {
+    width: 100px;
+    margin: 0 auto;
+}

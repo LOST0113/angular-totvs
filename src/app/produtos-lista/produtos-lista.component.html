@@ -1,29 +1,26 @@
 <table class="table my-4 table-dark table-striped-columns">
     <thead>
       <tr>
-        <th >#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th>ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ações</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>twitter</td>
+      <tr *ngFor="let produto of produtos">
+        <th>{{produto.id}}</th>
+        <th>{{produto.nome}}</th>
+        <th>{{produto.quantidade}}</th>
+        <th>{{produto.preco | currency: "BRL"}}</th>
+        <td id="buttons">
+          <button class="btn btn-info btn-sm" [routerLink]="['/produtos-form', produto.id]">Editar</button>
+          <button class="btn btn-danger btn-sm" (click)="deletarProduto(produto.id)">Excluir</button>
+        </td>
       </tr>
     </tbody>
   </table>
+  <div class="d-flex justify-content-center mb-3">
+    <button class="btn btn-success" [routerLink]="['/produtos-form']">Adicionar Produto</button>
+  </div>

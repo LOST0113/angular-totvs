@@ -10,6 +10,4 @@ import { ProdutosListaComponent } from "./produtos-lista/produtos-lista.componen
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'projeto-test';
-}
+export class AppComponent {}

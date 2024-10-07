@@ -1,3 +1,4 @@
+import { ProdutosFormComponent } from './produtos-form/produtos-form.component';
 import { Routes } from '@angular/router';
 import { ProdutosListaComponent } from './produtos-lista/produtos-lista.component';
 
@@ -7,5 +8,11 @@ export const routes: Routes = [
     },
     {
         path: "produtos-lista", component: ProdutosListaComponent
+    },
+    {
+        path: "produtos-form", component: ProdutosFormComponent
+    },
+    {
+        path: "produtos-form/:id", component: ProdutosFormComponent
     }
 ];
