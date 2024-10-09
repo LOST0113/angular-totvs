@@ -24,3 +24,7 @@ p {
 main {
     height: 84vh;
 }
+
+router-outlet {
+    width: 100%;
+}
